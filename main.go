@@ -20,7 +20,7 @@
 
 package main
 
-import "github.com/yorch/photo-renamer/cmd"
+import "github.com/pacoguzman/photo-renamer/cmd"
 
 func main() {
 	cmd.Execute()

@@ -1,10 +1,5 @@
 # photo-renamer
 
-[![Build Status](https://travis-ci.org/yorch/photo-renamer.svg?branch=master)](https://travis-ci.org/yorch/photo-renamer)
-[![Docker Cloud Build Status](https://img.shields.io/docker/cloud/build/yorch/photo-renamer)](https://hub.docker.com/r/yorch/photo-renamer)
-[![](https://images.microbadger.com/badges/image/yorch/photo-renamer.svg)](https://microbadger.com/images/yorch/photo-renamer)
-[![](https://images.microbadger.com/badges/version/yorch/photo-renamer.svg)](https://microbadger.com/images/yorch/photo-renamer)
-
 ## Overview
 
 This tool allows you to bulk rename image files (including RAW ones) using their EXIF info, to a format containing the timestamp. For photographers aficionados, this makes it easier to sort and organize your photos, instead of keeping their original names.
@@ -22,7 +17,7 @@ This tool can be build and run with Docker.
 If you just need to run this tool on any computer with Docker installed (MacOS and Linux, since I haven't used Windows for anything serious for at least 8 years, I wouldn't know if it runs fine there too), you can run:
 
 ```sh
-docker run -it -v `pwd`:/media yorch/photo-renamer /media
+docker run -it -v `pwd`:/media pacoguzman/photo-renamer /media
 ```
 
 This command will rename every image in the current directory using its EXIF creation date, like: `2020033110303.jpg`, for easier sorting and photo organization.

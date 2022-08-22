@@ -1,15 +1,15 @@
 # Builder
-FROM golang:alpine AS builder
+FROM golang:1.19.0-alpine3.16 AS builder
 RUN apk add --no-cache git
 WORKDIR /app
-COPY src/go.mod src/go.sum ./
+COPY go.mod go.sum ./
 RUN go get -d -v ./...
-COPY src/ .
+COPY . .
 RUN go build -o renamer main.go
 
 # Final image
-FROM alpine:latest
-LABEL maintainer="jorge.barnaby@gmail.com"
+FROM alpine:3.16
+LABEL maintainer="pacoguzmanp@gmail.com"
 
 COPY --from=builder /app/renamer /
 
