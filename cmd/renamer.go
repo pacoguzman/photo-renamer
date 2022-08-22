@@ -29,9 +29,9 @@ import (
 	"strings"
 	"time"
 
+	"github.com/pacoguzman/photo-renamer/utils"
 	"github.com/rwcarlsen/goexif/exif"
 	"github.com/spf13/cobra"
-	"github.com/yorch/photo-renamer/utils"
 )
 
 var counter int = 0
