@@ -1,6 +1,6 @@
 #!/bin/sh
 
-BUILD_DIR=build
+BUILD_DIR=bin
 
 rm -rf ${BUILD_DIR}
 
