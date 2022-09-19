@@ -1,3 +1,3 @@
-#/bin/sh
+#!/bin/sh
 
 docker build . -t photo-renamer

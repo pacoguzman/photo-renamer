@@ -106,7 +106,10 @@ func renamer(cmd *cobra.Command, args []string) {
 	if utils.AskForConfirmation() {
 		startTime := time.Now()
 
-		filepath.Walk(directory, visit)
+		err := filepath.Walk(directory, visit)
+		if err != nil {
+			fmt.Printf("Error walking directory %s -> %s\n", directory, err)
+		}
 
 		fmt.Println()
 		fmt.Println()
